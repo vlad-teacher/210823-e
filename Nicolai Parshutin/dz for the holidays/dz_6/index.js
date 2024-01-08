@@ -1,7 +1,6 @@
 let averageGrade;
 function getAverageGrade(one, two, three, four){
-    averageGrade = Math.round((one + two + three + four)/4);
-    return averageGrade; 
+    return Math.round((one + two + three + four)/4); 
 }
 
 console.log(getAverageGrade(4,4,5,5));
