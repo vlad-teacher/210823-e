@@ -61,5 +61,11 @@ for (let i = 0; i < diffArr.length; i++) {
     }
 }
 
+if (closeNumberArrs.length> 1) {
+    console.log(`Close numbers are : ${closeNumberArrs}`);
+} else {
+    console.log(`Close number is : ${closeNumberArrs[0]}`);
+}
 
-console.log(`Close numbers are : ${closeNumberArrs}`);
+
+
