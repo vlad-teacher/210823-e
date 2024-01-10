@@ -32,31 +32,29 @@ console.log("Наибольшее число, которое делится на
 // 2.1 массив в который войдут только те числа которые не повторялись ни одного раза
 
 const arr = [2,4,5,6,1,2,7,3,4];
+const unicElem = [];
+const dublicateElem = [];
 
-const set5 = new Set(arr);
-
-console.log(set5);
+function getUnicElements(arr){
+    for (let i = o; i<arr.lenght; i++){
+        if(arr.lastIndexOf(arr[i]) === arr.indexOf(arr[i])){
+            unicElem.push(arr[i]);
+        }
+    }
+}
 
 // 2.2 массив в который войдут только те числа которые повторялись хотя бы один раз
 
-function findDuplicateNumbers(array) {
-    let duplicateNumbers = [];
-    let uniqueNumbers = [];
+const arr1 = [2,4,2,2,5,6,6,1,2,7,3,4];
 
-    array.forEach(function (number) {
-        if (uniqueNumbers.includes(number)) {
-            if (!duplicateNumbers.includes(number)) {
-                duplicateNumbers.push(number);
-            }
-        } else {
-            uniqueNumbers.push(number);
-        }
-    });
-
-    return duplicateNumbers;
+function getDuplicateElements(arr) {
+    for (let i = 0; i < arr.lenght; i++){
+        if( arr.lastIndexOf(arr[i]) != arr.indexOf(arr[i]) && !dublicateElem.includes(arr[i])){
+            dublicateElem.push(arr[i]);
+        } 
+    }
 }
 
-let originalArray = [2,4,5,6,1,2,7,3,4];
-let result2 = findDuplicateNumbers(originalArray);
-
-console.log(result2);
+getUnicElements(arr1);
+getDublicateElements(arr1);
+console.log(unicElem, dublicateElem);
