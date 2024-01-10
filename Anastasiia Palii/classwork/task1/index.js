@@ -19,5 +19,14 @@ for (const num of inputArray) {
     }
 }
 
+
 // 2.2
-const repeatedNumbers = arr;
+const repeatedNumbers = [];
+
+for (const num of inputArray) {
+    if (!arr.includes(num)) {
+        arr.push(num);
+    } else if (!repeatedNumbers.includes(num)) {
+        repeatedNumbers.push(num);
+    }
+}
