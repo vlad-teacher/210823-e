@@ -4,11 +4,12 @@ const arr = [
     [31,32,33],
     [41,42,43]
 ];
-    function getMaxArr(arr){
+
+function getMaxArr(arr){
     let sumArr = 0;
     let maxSumArr = 0;
 
-    for(let i = 0;i<arr.length;i++){
+  for(let i = 0;i<arr.length;i++){
         let sumI = 0;
         for(let j = 0;j<arr[i].length;j++){
         sumI+=arr[i][j];
@@ -21,7 +22,7 @@ const arr = [
     return(maxSumArr);
     }
 
-    console.log(getMaxArr(arr));
+console.log(getMaxArr(arr));
   
 
 
