@@ -32,5 +32,3 @@ const oppositeArr = arr2.map(function(number){
     }
 });
 console.log(oppositeArr)
-
-
