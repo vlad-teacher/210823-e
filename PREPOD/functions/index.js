@@ -196,15 +196,20 @@ const arr2 = [
 ];
 
 
+// 1. проверить есть ли в массиве объект у которого имя митрофан (some, find)
+// 2. проверить всем ли есть 18 лет
+// 3. с помощью метода filter оставить в массиве только те объекты у которых длина имени больше 6
+// 4. с помощью меотда reduce Сформировать строку вида 'Hello Valerchik and Olejik ...'
 
-const result = arr2.reduce((overall, {name, age}) => {
-    return {
-        ...overall,
-        [name]: age
-    };
-}, {});
 
-console.log(result);
+// const result = arr2.reduce((overall, {name, age}) => {
+//     return {
+//         ...overall,
+//         [name]: age
+//     };
+// }, {});
+
+// console.log(result);
 
 
 // const result = arr2.reduce((sum, {age}) => sum + age, 0);
@@ -222,4 +227,10 @@ console.log(result);
 // });
 
 
+// const isOver18 = arr3.every(({age}) => age > 18);
 
+
+// 1. проверить есть ли в массиве объект у которого имя митрофан (some, find)
+// 2. проверить всем ли есть 18 лет
+// 3. с помощью метода filter оставить в массиве только те объекты у которых длина имени больше 6
+// 4. с помощью меотда reduce Сформировать строку вида 'Hello Valerchik and Olejik ...'
