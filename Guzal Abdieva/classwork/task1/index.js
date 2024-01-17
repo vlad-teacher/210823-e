@@ -2,35 +2,79 @@
 // 2.1 массив в который войдут только те числа которые не повторялись ни одного раза [5, 6, 1, 7, 3]
 // 2.2 массив в который войдут только те числа которые повторялись хотя бы один раз [2, 4]
 
-const arr1 = [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4];
+// const arr1 = [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4];
 
-function getUnicElements(arr) {
-  // [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4]
-  const unicElem = [];
+// function getUnicElements(arr) {
+//   // [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4]
+//   const unicElem = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.lastIndexOf(arr[i]) === arr.indexOf(arr[i])) {
-      unicElem.push(arr[i]);
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.lastIndexOf(arr[i]) === arr.indexOf(arr[i])) {
+//       unicElem.push(arr[i]);
+//     }
+//   }
 
-  return unicElem;
-}
+//   return unicElem;
+// }
 
-function getDublicateElements(arr) {
-  const dublicateElem = [2];
+// function getDublicateElements(arr) {
+//   const dublicateElem = [2];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (
-      arr.lastIndexOf(arr[i]) !== arr.indexOf(arr[i]) && // [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4]
-      !dublicateElem.includes(arr[i])
-    ) {
-      dublicateElem.push(arr[i]);
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (
+//       arr.lastIndexOf(arr[i]) !== arr.indexOf(arr[i]) && // [2, 4, 2, 2, 5, 6, 1, 2, 7, 3, 4]
+//       !dublicateElem.includes(arr[i])
+//     ) {
+//       dublicateElem.push(arr[i]);
+//     }
+//   }
 
-  return dublicateElem;
-}
+//   return dublicateElem;
+// }
 
-const result = getUnicElements(arr1);
-const result2 = getUnicElements([2, 4, 1, 4, 523, 543, 5, 45, 352, 342, 4, 4]);
+// const result = getUnicElements(arr1);
+// const result2 = getUnicElements([2, 4, 1, 4, 523, 543, 5, 45, 352, 342, 4, 4]);
+
+// const arr = [
+//   Valerchik,
+//   Olejik,
+//   Mitrofan,
+//   Valerchik,
+//   Evlampij,
+//   Olejik,
+//   Valerchik,
+// ];
+
+// let quantityName = 0;
+
+// let userInput = prompt("введите имя");
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr.indexOf(arr[i]) === userInput) {
+//     quantityName++;
+//     console.log("количество совпадений:  ${quantityName}");
+//   } else {
+//     console.log("такого имени нет");
+//   }
+// }
+
+// const arr = [
+//   Valerchik,
+//   Olejik,
+//   Mitrofan,
+//   Valerchik,
+//   Evlampij,
+//   Olejik,
+//   Valerchik,
+// ];
+// let count = 0;
+
+// let userInput = prompt("введите имя");
+// for (let i = 0; i < arr.length; i++){
+
+//   if(arr===1) count++
+//   console.log( "количество совпадений:");
+//     }else{
+//      alert('такого имени нет');
+//     }
+// console.log(arr)
