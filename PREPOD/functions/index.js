@@ -195,10 +195,19 @@ const arr2 = [
   },
 ];
 
-const result = arr2.reduce((sum, {age}) => sum + age, 0);
 
 
+const result = arr2.reduce((overall, {name, age}) => {
+    return {
+        ...overall,
+        [name]: age
+    };
+}, {});
 
+console.log(result);
+
+
+// const result = arr2.reduce((sum, {age}) => sum + age, 0);
 
 // const arr3 = arr2.sort(({age}, {age: age2}) => age - age2);
 
