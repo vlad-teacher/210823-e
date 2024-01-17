@@ -39,9 +39,14 @@ console.log(n);
 
 
 //2
-const [one,two,three,four='Arizona'] = car.adress.region;
-console.log(four);
+//const [one,two,three,four='Arizona'] = car.adress.region;
 
+const {adress:{
+    region:[one,two,three,four ='Arizona'] 
+    }
+} = car;
+
+console.log(four);
 
 //3
 const {specs:{
