@@ -1,0 +1,279 @@
+[33mcommit 5f9efc92cbd417a27a227e1eff7b83e18db7cd04[m[33m ([m[1;36mHEAD -> [m[1;32mblabla[m[33m)[m
+Author: phill <shchesniak.o@gmail.com>
+Date:   Mon Jan 15 20:46:21 2024 +0100
+
+    it is a joke!
+
+[33mcommit 9e264d0ee9b14fbb9321d644912217f95ffd0385[m
+Author: phill <shchesniak.o@gmail.com>
+Date:   Mon Jan 15 20:31:14 2024 +0100
+
+    blablabla
+
+[33mcommit 3ceaaa53a18795c6d61c70272f5f95d2ea8d3605[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: phill <shchesniak.o@gmail.com>
+Date:   Sat Jan 13 19:01:54 2024 +0100
+
+    Homework10.01.24
+
+[33mcommit 949af7340ef2e94e356ea4beb207f9a0f648319e[m[33m ([m[1;31morigin/hw/10.01.24[m[33m, [m[1;32mhw/10.01.24[m[33m)[m
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Wed Jan 10 20:32:37 2024 +0100
+
+    I've changed
+
+[33mcommit 82967558cd9c27be2daae099c9b6e6379735d490[m
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Wed Jan 10 19:37:13 2024 +0100
+
+    all
+
+[33mcommit 3ae4442344e8a1d5cfcbdf39d89674f6d5078503[m
+Merge: 8f9b7a2 3e3d842
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Mon Jan 8 21:46:11 2024 +0100
+
+    Merge branch 'main' of https://github.com/vlad-teacher/210823-e
+
+[33mcommit 3e3d84279b12e91d1dfcdc695f0b03dc56ac4181[m
+Author: Vlad <vlad.teacher@gmail.com>
+Date:   Mon Jan 8 23:45:01 2024 +0300
+
+    themes
+
+[33mcommit 8f9b7a2a4c209b0b97c6a85364f5ba50203cd8ab[m
+Merge: 72c01aa 3ecb3aa
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Mon Jan 8 21:07:46 2024 +0100
+
+    Merge branch 'main' of https://github.com/vlad-teacher/210823-e
+
+[33mcommit 3ecb3aa0f6324ab738b7f7980b115370668a3e74[m
+Merge: 84f4554 718554f
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Mon Jan 8 22:51:58 2024 +0300
+
+    Merge pull request #15 from GuzalASLAM/main
+    
+    create readme file
+
+[33mcommit 718554f7751b8cf3baf49f9d5292d5b327d1b942[m
+Author: GuzalASLAM <gguzal051@gmail.com>
+Date:   Sat Jan 6 13:55:46 2024 -0500
+
+    create readme file
+
+[33mcommit 84f4554a0fd5fb67c34b85d69155ddd5b56b84d6[m
+Merge: 6ea6d35 0137425
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Tue Dec 19 00:16:49 2023 +0300
+
+    Merge pull request #14 from CrossBTW/main
+    
+    I add readme file
+
+[33mcommit 6ea6d35e75972f711d73c23e5b02132d31e7cde1[m
+Merge: bb1c883 f981d30
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Tue Dec 19 00:07:52 2023 +0300
+
+    Merge pull request #13 from hakingdev/main
+    
+    all fixed
+
+[33mcommit 72c01aa9ffc05fd849ec7f217a69064a6a7d19c9[m
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Mon Dec 18 19:47:56 2023 +0100
+
+    I  have add folder for 18.12
+
+[33mcommit 0137425660c4dd1c0965daed42e38eee69e4e506[m
+Author: Heorhii <h5727387@gmail.com>
+Date:   Mon Dec 18 19:28:03 2023 +0100
+
+    I add readme file
+
+[33mcommit f981d30a63a4256356053bcf9c200d3079312c63[m
+Author: hakingdev <j72Y7c62Nm@2fQJ>
+Date:   Mon Dec 18 19:27:18 2023 +0100
+
+    all fixed
+
+[33mcommit bb1c883df7ace84c912d4e4459bd3d1d3eec5715[m
+Merge: b5e6083 8330db8
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Mon Dec 18 21:11:29 2023 +0300
+
+    Merge pull request #12 from SIrena09/main
+    
+    add readme file
+
+[33mcommit b5e60839144a680e9b60eb828a3919264bf2f1f6[m
+Merge: 2384ce6 19198ff
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Mon Dec 18 21:11:10 2023 +0300
+
+    Merge pull request #11 from Givi3/main
+    
+    add some file
+
+[33mcommit 8330db8ebd83f1b650f61a78c34467b096bffb4e[m
+Author: Irina.Shamarina <ir.sh0904@gmail.com>
+Date:   Sat Dec 16 13:18:16 2023 +0100
+
+    change readme file
+
+[33mcommit a03d7c3bbe9847ace075c55d577614cd95c657fb[m
+Merge: 666cbc3 2384ce6
+Author: Irina.Shamarina <ir.sh0904@gmail.com>
+Date:   Sat Dec 16 12:51:20 2023 +0100
+
+    Merge branch 'main' of https://github.com/vlad-teacher/210823-e
+
+[33mcommit 19198ffd752504fd71d369a5c9474f198aee4271[m
+Author: Givi_Mskhvilidze <blsgiorgi@gmail.com>
+Date:   Thu Dec 14 23:44:07 2023 +0100
+
+    my file
+
+[33mcommit 98a46905b41cf1b46c4813d36c8c2a02a49bcf84[m
+Author: hakingdev <j72Y7c62Nm@2fQJ>
+Date:   Wed Dec 13 22:57:18 2023 +0100
+
+    create readme file
+
+[33mcommit 2384ce6f563584279a301e086818aa27c97fd074[m
+Merge: 8caf328 8c11b0c
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:39:57 2023 +0300
+
+    Merge pull request #1 from Katja1411/main
+    
+    add readme
+
+[33mcommit 8caf32878bfb957f0691307c7d0df47ca4aa2cd1[m
+Merge: 41da8bf 3d407e5
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:39:45 2023 +0300
+
+    Merge pull request #2 from IrynaHaiduk/main
+    
+    Added my folder for homework
+
+[33mcommit 41da8bf61d8fe6fdc7f5a77eb0e313b22cf1468a[m
+Merge: 6106092 863c566
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:39:30 2023 +0300
+
+    Merge pull request #3 from neph1ll/main
+    
+    add readme
+
+[33mcommit 6106092d5b4897af1c85c86aae6c918181efab14[m
+Merge: d932ac2 fe5c1c8
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:39:17 2023 +0300
+
+    Merge pull request #4 from VladislavaTsmin/main
+    
+    I add commit
+
+[33mcommit d932ac2bd221cfacc16c510babf9bd7d93aba832[m
+Merge: 5fef27d 17bf991
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:39:01 2023 +0300
+
+    Merge pull request #5 from Anastasipalii/main
+    
+    add readme
+
+[33mcommit 5fef27d06f4f4579db060a549dd09fdcda5ef3eb[m
+Merge: 5010f7f 5ffb741
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:38:49 2023 +0300
+
+    Merge pull request #6 from Nicolai800/main
+    
+    add readme
+
+[33mcommit 5010f7fd1ab082ac01547eec7648c36508125544[m
+Merge: 1775cde 0392e36
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:38:33 2023 +0300
+
+    Merge pull request #7 from PeeSiDoubleU/main
+    
+    create readme file
+
+[33mcommit 1775cdea6128c9503714b2fb2a612afa0b7a47d1[m
+Merge: 98e83ed b035faa
+Author: vlad-teacher <126182337+vlad-teacher@users.noreply.github.com>
+Date:   Wed Dec 13 21:35:08 2023 +0300
+
+    Merge pull request #9 from Mihaela-Morari/main
+    
+    New folder
+
+[33mcommit 77ff22e072d79777a31d4309fb9013e672cdda2a[m
+Author: Givi_Mskhvilidze <blsgiorgi@gmail.com>
+Date:   Wed Dec 13 19:21:24 2023 +0100
+
+    reame
+
+[33mcommit 863c566cf188dfd7472fcabd0bc84356ab96a735[m
+Merge: a18e9e4 98e83ed
+Author: phill <143023896+neph1ll@users.noreply.github.com>
+Date:   Wed Dec 13 19:17:33 2023 +0100
+
+    Merge branch 'vlad-teacher:main' into main
+
+[33mcommit fe5c1c8c3c2f73dff40cdaa327ec0bff4ca5f450[m
+Author: vlada <vladislava568cmin569@gmail.com>
+Date:   Wed Dec 13 19:14:28 2023 +0100
+
+    my commit
+
+[33mcommit 5ffb74170877119f63e65afc7b7f5d590f602395[m
+Author: Nicolai.Parshutin <happy454420@gmail.com>
+Date:   Wed Dec 13 17:05:20 2023 +0100
+
+    create readme file
+
+[33mcommit 666cbc38747fc3aeeb912cf0386ce7116d5382a7[m
+Author: Irina.Shamarina <ir.sh0904@gmail.com>
+Date:   Tue Dec 12 20:48:57 2023 +0100
+
+    create readme file
+
+[33mcommit a394b05f3d8d7beed5ddabb58320d923af7e73f8[m
+Author: vlada <vladislava568cmin569@gmail.com>
+Date:   Mon Dec 11 22:00:56 2023 +0100
+
+    comment
+
+[33mcommit 8c11b0c618247275b81b1358a71e6a3fb6269d43[m
+Author: Katja <asrounk@gmail.com>
+Date:   Mon Dec 11 21:58:46 2023 +0100
+
+    create readme file
+
+[33mcommit a18e9e42dcf52a3276fa51acac5a01d360072032[m
+Author: Oleksandr.Shchesniak <shchesniak.o@gmail.com>
+Date:   Mon Dec 11 21:58:36 2023 +0100
+
+    create readme file
+
+[33mcommit 0392e36c05ff36c0c198a7b587bf6ca569ea7080[m
+Author: Andrei.Kolas <andreysamp228@gmail.com>
+Date:   Mon Dec 11 21:58:33 2023 +0100
+
+    create readme file
+
+[33mcommit 17bf9918ca5bf80d5fe4806dca907686896ce9d4[m
+Author: Nastya.Paliy <anastasiapaliy97@gmail.com>
+Date:   Mon Dec 11 21:58:31 2023 +0100
+
+    create readme file
+
+[33mcommit 98e83ed9f53cca4fc106cba60bb88b04fa73dc03[m
+Author: Vlad Tereshenkov <VTeres
