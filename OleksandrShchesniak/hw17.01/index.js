@@ -3,7 +3,7 @@ const arr = ['Valerchik','Olezhik','Katya','Phill','Vladosik', 'Metrofan']
 
 const arr2 = [
     {
-        name: 'Olezha',
+        name: 'Olezhik',
         age: 23
     },
     {
@@ -11,11 +11,19 @@ const arr2 = [
         age: 19
     },
     {
-        name: 'Vlados',
+        name: 'Vladosik',
         age: 25
     },
     {
-        name: 'Valera',
+        name: 'Valerchik',
+        age: 20
+    },
+    {
+        name: 'Katya',
+        age: 26
+    },
+    {
+        name: 'Metrofan',
         age: 17
     }
 ]
@@ -48,7 +56,7 @@ console.log(res4)
 
 const res5 = (sum, current, index) => {
     const text = index === 0 ? 'Hello ' : ' and ';
-    return sum + text + current;
+    return sum + text + current.name;
 };
-const finalStr = arr.reduce(res5, '');
+const finalStr = arr2.reduce(res5, '');
 console.log(finalStr)
