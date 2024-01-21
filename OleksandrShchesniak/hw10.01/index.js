@@ -24,11 +24,11 @@ for( let i = 0; i < arr.length; i++){
 // На основе этого массива, сформировать новый массив в котором все числа будут противоположны по знаку
 
 const arr2 = [32, -41, 0, 12, 67, 12, -34];
-const oppositeArr = arr2.map(function(number){
+const arr3 = arr2.map(function(number){
     if(number !== 0){
         return -number;
     } else{
         return 0;
     }
 });
-console.log(oppositeArr)
+console.log(arr3)
