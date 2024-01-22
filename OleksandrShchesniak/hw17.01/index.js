@@ -47,8 +47,8 @@ console.log(res3)
 
 // 3. с помощью метода filter оставить в массиве только те объекты у которых длина имени больше 6
 
-const res4 = arr.filter((item) => {
-    return item.length > 6;
+const res4 = arr2.filter((item) => {
+    return item.name.length > 6;
 });
 console.log(res4)
 
