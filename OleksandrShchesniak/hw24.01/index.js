@@ -68,9 +68,13 @@ console.log(maxSumArray);
 
 const arr = [2, 10, 33, 34, 75, 80, 15, 16, 100, 98];
 
-const result = arr.filter(number => {
-    return number % 2 === 0 && number > 9 && number < 100});
-console.log(result)
+function doubleNum(arr){
+  return arr.filter((element, index, array) => {
+    return array.lastIndexOf(element) !== index;
+  });
+}
+const arrDoubleNum = doubleNum(doubleNum);
+console.log(arrDoubleNum)
 
 
 // 4. Дан массив объектов:
