@@ -59,7 +59,7 @@ const randomArray = Array.from({length: 8},
     () => Array.from({length: Math.floor(Math.random()*6)+1}, 
     () => Math.floor(Math.random()*10)));
 
-const maxSumArray = randomArray.reduce((maxSumArray, currentArray) => (maxArray.reduce((a,b) => a+b,0) > currentArray.reduce((a,b) => a + b,0) ? maxArray : currentArray));
+const maxSumArray = randomArray.reduce((maxSumArray, currentArray) => (maxSumArray.reduce((a,b) => a+b,0) > currentArray.reduce((a,b) => a + b,0) ? maxSumArray : currentArray));
 console.log(maxSumArray);
 
 // 3. Дан случайный массив чисел. С помощью метода .filter()
