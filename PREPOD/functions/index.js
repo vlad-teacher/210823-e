@@ -1,186 +1,162 @@
-
-// const arr = [23,2,45,1,1];
-// const arr2 = [5,1,43,54,6564];
+// closure замыкание
 
 
-// function getMaxFromArray (myBestArray) { // let myBestArray = arr2;
-//     let max = myBestArray[0];
+// let age = 2;
 
-//     for (let i = 0; i < myBestArray.length; i++) {
-//         if (myBestArray[i] > max) {
-//             max = myBestArray[i];
-//         }
+
+
+// function foo () {
+//     // let age = 0;
+   
+//     function bar () {
+//        let age = 100;
 //     }
-    
-//     return max;
+
+//     bar();
+
+//     console.log(age);
 // }
 
-// console.log(getMaxFromArray(arr));
-// console.log(getMaxFromArray(arr2));
-// console.log(getMaxFromArray(arr3));
+// foo();
 
+// let b = 33;
+// let c = 44;
 
+// function foo (test) {
 
+//     let age = 100;
+   
+//     function bar (age) { // let age = 100;
 
-// const arr = [23,2,45,1,1];
-// const arr2 = [5,1,43,54,6564];
+//         age = 222;
 
-// function plitochnikKladi (plitka) {
-
-    // if (!Array.isArray(plitka)) {
-    //     console.log('ERROR!');
-    //     return; //! rest, spread decl 
-    // }
-
-//     for (let i = 0; i < plitka.length; i++) {
-//         console.log(plitka[i]);
+//         console.log(blabla);
+//         // {age, test, b}
 //     }
-    
+
+//     bar(age);
+
+
+//     let blabla = 'blabla';
+
 // }
 
-// plitochnikKladi();
+// foo();
 
-// plitochnikKladi(arr2);
-// plitochnikKladi(['a','b','c']);
-// plitochnikKladi( arr2 );
-// plitochnikKladi();
-// plitochnikKladi();
+// console.log(age);
 
 
-// function square (a, b = 10, c = 0) { 
-//     return a + b + c;
+// HIGHER ORDER FUNCTION
+// callback
+
+// let a = 1;
+
+// function foo (cb) { // bar
+//     let a = 2;
+
+//     cb();
 // }
 
-// const result =  2 / 1 + square(1,2,3);
+// foo(bar);
 
-// console.log( square(1,2,3) );
+// function bar () {
+//     // {a: 1, foo}
 
-
-
-
-// function declaration
-// function foo (a, b) {
-//     return a + b;
-// }
-
-
-// function expression
-// const test = function func (a,b) { // !
-//     return a - b;
-// };
-
-// test();
-
-// console.log(test(10,5));
-// console.log(func(10,5));
-
-
-
-// function foo (a, b) {
-//     return a + b;
-// }
-
-// const test = foo;
-
-// console.log(test === foo);
-
-
-// const person = {
-//     name: 'Valerchik',
-//     age: 2,
-//     city: 'Berlin'
-// };
-
-// const person2 = {
-//     name: 'Olejik',
-//     age: 12,
-//     city: 'Paris'
-// };
-
-
-// function greet ({name, city} = {english: 'b2'}) {
-//     console.log(`Hello ${name} from ${city}`);
-// }
-
-// greet(person);
-// greet();
-
-
-
-
-// let person = {
-//     name: 'Valerchik',
-//     age: 2,
-//     city: 'Berlin'
-// };
-
-
-// function foo (obj) { // let obj = person;
-//     obj = null;
-// }
-
-// foo(person);
-
-// console.log(person);
-
-
-
-// const set = new Set([10,21,3,2,3]);
-
-// const arr = [...set];
-// const arr2 = Array.from(set);
-
-// set.add(21);
-// set.add(21);
-// set.add(21);
-
-// const person = {
-//     name: 'Valerchik',
-//     age:23,
-// };
-
-// const dog = {
-//     nick: 'Bobik',
-//     age: 100
-// };
-
-// const sobaki = new Map([['a',1], ['b', 2]]);
-
-// sobaki.set(person, dog);
-
-// console.log(sobaki.get(person));
-
-
-// console.log( set.keys() );
-
-// for (let item of set.values() ) {
-//     console.log(item);
+//     console.log(a);
 // }
 
 
-// 1. дан массив случайных числе найти наибольшее число которое делится на 3
-// 2. дан массив [2,4,5,6,1,2,7,3,4] на основе этого массива получить
-// 2.1 массив в который войдут только те числа которые не повторялись ни одного раза [5, 6, 1, 7, 3]
-// 2.2 массив в который войдут только те числа которые повторялись хотя бы один раз [2, 4]
+// Создать функцию checkLogin, которая принимает 4 параметра. 
+// 1 параметр - это логин, введенный пользователем,
+// 2 – правильный логин,
+// 3 – callback, который вызовется если логин верный,
+// 4 – callback, который вызовется если логин ложный.
 
-let arr = [23,558, 44, 556, 561, 2, 11, 100000];
 
-let maxNum = null;
+// let correctLogin = 'admin'
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0) {
-        maxNum = arr[i];
-        break;
+// let userLogin = prompt('Введите логин:');
+
+// function cbTrue(){
+//     console.log('Добро пожаловать!')
+// }
+
+// function cbFalse(){
+//     console.log('Пароль неверный.')
+// }
+
+// function checkLogin(login, trueLogin, onCorrectLogin, onIncorrectLogin = () => console.log('DEFAULT')){
+//     if (login === trueLogin){
+//         onCorrectLogin();
+//     } else{
+//         onIncorrectLogin();
+//     }
+// }
+
+// checkLogin(userLogin, correctLogin, cbTrue, cbFalse);
+
+// checkLogin('user', 'asdasd', () => console.log('test'));
+
+
+// arr.reduce();
+
+// function foo (cb) {
+//     console.log('HELLO');
+
+//     cb();
+// }
+
+// foo(bar);
+// foo(valerchik);
+// foo(() => console.log('asdasd'));
+
+// function bar () {
+//     console.log('WORLD');
+// }
+
+// function valerchik () {
+//     console.log('VALERCHIK');
+// }
+
+
+// IIFE
+// immidately invoked function expression
+
+// (() => {
+//    let user = 'Valerchik';
+// })()
+
+
+// (function (a,b) {
+//     let user = 'Olejik';
+// })(2,3)
+
+// const foo = function () {};
+
+// let user = 'valerchik';
+
+
+// напишите функцию map
+
+const result = map([1,2,3], (item, index, arr  ) => {
+    if (index % 2 === 0) {
+        return item * 2;
+    } else {
+        return item;
     }
+});
+
+
+function map (mass, cb) {
+    let resultArr = [];
+
+    for (let i = 0; i < mass.length; i++) {
+        const futureElement = cb(mass[i], i, mass);
+
+        resultArr.push(futureElement);
+    }
+
+    return resultArr;
 }
 
-if (maxNum !== null) {
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] % 3 === 0 && maxNum < arr[i]){
-            maxNum = arr[i];
-        }
-    }    
-}
-
-
-
+console.log(result);
