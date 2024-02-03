@@ -18,7 +18,7 @@ function addMr(names) {
 
 }
 function showAlert(names) {
-    names.forEach(name => alert(name));
+    names.forEach( alert);
 }
 
 let newNames = ['Valery', 'John', 'Dylan', 'Oliver'];
@@ -28,30 +28,21 @@ processName(newNames, addMr, showAlert);
 /* 2. Дан массив [1,1,1,4,4,5,1,6,6,74,74,74,3]. Написать функцию, которая вернет массив только из тех чисел, которые повторялись в исходном.
 myFuncName([1,1,1,4,4,5,1,6,6,74,74,74,3]) //  [1,4,6,74]*/
 
+let arr = [1,1,1,4,4,5,1,6,6,74,74,74,3];
 
 function myFuncName(arr) {
-    let counts = {};
-    for (let i = 0; i < arr.length; i++) {
-        if (counts[arr[i]]) {
-            counts[arr[i]]++
+    return arr.reduce((resultArr, num) => {
+        const doesNumRepeat = arr.indexOf(num) !== arr.lastIndexOf(num);
+        const isNumAlreadyFound = resultArr.includes(num);
 
-        } else {
-            counts[arr[i]] = 1;
+        if (doesNumRepeat && !isNumAlreadyFound) {
+            resultArr.push(num);
         }
-    }
-
-    let result = [];
-
-    for (let num in counts) {
-        if (counts[num] > 1) {
-            result.push(parseInt(num));
-        }
-    }
-
-    return result;
+        return resultArr;
+    }, []);
 }
 
-console.log(myFuncName([1, 1, 1, 4, 4, 5, 1, 6, 6, 74, 74, 74, 3]));
+console.log(myFuncName(arr));
 
 
 
@@ -60,11 +51,11 @@ console.log(myFuncName([1, 1, 1, 4, 4, 5, 1, 6, 6, 74, 74, 74, 3]));
 /* 3. Cоздать случайный двумерный массив (вложенные массивы разной длины) из 8 элементов. Обработать массив reduce() и вернуть тот массив сумма элементов которого наибольшая. */
 
 
-let arr = Array.from({ length: 8 }, () => Array.from({ length: Math.floor(Math.random() * 10) + 1 }, () => Math.floor(Math.random() * 100)));
+let arr0 = Array.from({ length: 8 }, () => Array.from({ length: Math.floor(Math.random() * 10) + 1 }, () => Math.floor(Math.random() * 100)));
 
-console.log('Исходный массив: ', arr);
+console.log('Исходный массив: ', arr0);
 
-let maxSumArray = arr.reduce((maxArr, currArr) => {
+let maxSumArray = arr0.reduce((maxArr, currArr) => {
     let currSum = currArr.reduce((a, b) => a + b, 0);
     let maxSum = maxArr.reduce((a, b) => a + b, 0);
     return currSum > maxSum ? currArr : maxArr;
@@ -80,6 +71,19 @@ let filteredArray = arr1.filter(num => num >= 10 && num < 100 && num % 2 === 0);
 console.log(filteredArray);
 
 // 4. Дан массив объектов:
+
+function groupPlayersByTeam(fbTeam) {
+
+    const teams = [...new Set(fbTeam.map(player => player.team))];
+    const fbPlayersByTeams = {};
+
+    teams.forEach(team => {
+        fbPlayersByTeams[team] = fbTeam.filter(player => player.team === team);
+    });
+
+    return fbPlayersByTeams;
+
+}
 
 const fbTeam = [
     {
@@ -119,18 +123,12 @@ const fbTeam = [
         team: "Rico"
     }
 ];
+
+console.log(groupPlayersByTeam(fbTeam));
+
+
+
 // С помощью метода reduce() преобразуйте его в объект вида:
-
-const fbPlayersByTeams = fbTeam.reduce((acc, player) => {
-    if (!acc[player.team]) {
-        acc[player.team] = [];
-    }
-    acc[player.team].push(player);
-    return acc;
-}, {});
-
-console.log(fbPlayersByTeams);
-
 // const fbPlayersByTeams = {
 //     Juventus: [{}, {}, {}],
 //     PSG: [{}],
