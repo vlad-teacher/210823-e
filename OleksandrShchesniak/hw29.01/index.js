@@ -11,31 +11,24 @@
 // classNameEditor('test', false) // 'smth' - удалили класс 'test'
 // classNameEditor('test', false) // 'smth' - удалили класс 'test' еще раз (это невозможно тк класс уже удален)
 
-function classNameEditor(className, bool) {
-    const target = document.getElementById("element");
-  
-    if (!target) {
-      return '';
+function classNameEditor() {
+  let classes = [];
+  return function(className, isAddingClass){
+    if(!classes.includes(className) && isAddingClass){
+      classes.push(className);
+    } else if(classes.includes(className) && !isAddingClass){
+      classes.splice(classes.indexOf(className), 1);
     }
-
-    let classes = target.className.split(' ');
-
-    bool ? classes.includes(className) || classes.push(className) : 
-    classes.includes(className) && classes.splice(classes.indexOf(className), 1);
-  
-        // if (bool && classes.indexOf(className) === -1) {
-    //     classes.push(className);
-    // } else if(!bool && classes.indexOf(className) !== -1){
-    //   classes.splice(classes.indexOf(className), 1);
-    // }
-
-    target.className = classes.join(' ').trim();
-    return target.className;
+    return classes.join(' ');
   }
+  }
+
+  const classNameEditorFunc = classNameEditor();
+
   
-  console.log(classNameEditor());
-  console.log(classNameEditor('test', true));
-  console.log(classNameEditor('test', true));
-  console.log(classNameEditor('smth', true));
-  console.log(classNameEditor('test', false));
-  console.log(classNameEditor('test', false));
+  console.log(classNameEditorFunc());
+  console.log(classNameEditorFunc('test', true));
+  console.log(classNameEditorFunc('test', true));
+  console.log(classNameEditorFunc('smth', true));
+  console.log(classNameEditorFunc('test', false));
+  console.log(classNameEditorFunc('test', false));
