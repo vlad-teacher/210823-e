@@ -1,162 +1,219 @@
-// closure замыкание
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+// };
 
+// function a (obj) {
+//     obj.a = 1;
+//     return obj;
+// }
 
-// let age = 2;
+// function b (obj) {
+//     obj.b = 2;
+//     return obj;
+// }
 
+// function c (obj) {
+//     obj.c = 3;
+//     return obj;
+// }
 
+// const aAndB = [a,b];
 
-// function foo () {
-//     // let age = 0;
-   
-//     function bar () {
-//        let age = 100;
+// const bAndC = [b,c];
+
+// const all = [a,b,c]; // c(b(a())) // pipe a(b(c()))
+
+// const myObj = all.reduce((res, f) => f(res),{});
+
+// c(b(a({})))
+
+// console.log(myObj);
+
+// obj methods
+
+// 'use strict';
+
+// function code() {
+//   console.log(`${this.userName} codes`);
+// }
+
+// const person = {
+//   userName: "Valerchik",
+//   home: "Krysha",
+//   isOboltus: false,
+//   code,
+//   stack: ["PHP", "Wordpress", "Drupal"],
+// };
+
+// const person2 = {
+//   userName: "Mitrofan",
+//   home: "Pod Mostom",
+//   isOboltus: true,
+//   code,
+//   stack: ["CSS", "JS", "React"],
+// };
+
+// const dog = {
+//   userName: "Bobik",
+//   poroda: "ovcharka",
+//   code: person.code,
+// };
+
+// function makeThemCode(fe, be, qa) {
+//   console.log("CODE EVERYBODY!");
+//   fe();
+//   be();
+//   qa();
+// }
+
+// makeThemCode(person.code, person2.code, dog.code);
+
+// makeThemCode(person2.code, dog.code, person.code);
+
+// function code() {
+//   console.log(`${this.userName} codes`);
+// }
+
+// const person = {
+//   userName: "Valerchik",
+//   home: "Krysha",
+//   isOboltus: false,
+//   code,
+//   codeAll: function () {
+//     this.stack.forEach((tech) => {
+//         console.log(`${this.userName} codes on ${tech}`);
+//     });
+//   },
+//   stack: ["PHP", "Wordpress", "Drupal"],
+// };
+
+// person.codeAll();
+
+// const person2 = {
+//   userName: "Mitrofan",
+//   home: "Pod Mostom",
+//   isOboltus: true,
+//   code,
+//   stack: ["CSS", "JS", "React"],
+// };
+
+// const eat = function (smth, amount) {
+//   console.log(`${this.userName} eats ${smth} of ${amount}kg`);
+// }
+
+// const person = {
+//   userName: "Valerchik",
+//   home: "Krysha",
+//   run() {
+//     console.log(`${this.userName} runs`);
+//   },
+//   eat: eat,
+// };
+
+// const dog = {
+//   userName: "Bobik",
+// };
+
+// call apply bind
+
+// eat.call(dog, 'meat', 1);
+// eat.apply(person, ['tomato', 20]);
+
+// const eatCopy = eat.bind(dog, 'shahlyk');
+
+// eatCopy(10);
+// eatCopy(20);
+
+// const persons = [
+//     {
+//         name: 'One',
+//         age: 1,
+//     },
+//     {
+//         name: 'Two',
+//         age: 2
+//     },
+//     {
+//         name: 'Three',
+//         age: 3
+//     },
+//     {
+//         name: 'Four',
+//         age: 4
 //     }
+// ];
 
-//     bar();
+// Каждому объекту из этого массива необходимо добавить метод .sayHello()
+// который выводит сообщение вида "Hello! My name is {NAME}",
+// где NAME - это поле name каждого объекта
 
-//     console.log(age);
-// }
+// const persons = [
+//   {
+//     name: "One",
+//     age: 1,
+//   },
+//   {
+//     name: "Two",
+//     age: 2,
+//   },
+//   {
+//     name: "Three",
+//     age: 3,
+//   },
+//   {
+//     name: "Four",
+//     age: 4,
+//   },
+// ];
 
-// foo();
+// const sayHello = function () {
+//   console.log(`Hello! My name is ${this.name} `);
+// };
 
-// let b = 33;
-// let c = 44;
+// const helloPersons = persons.map((item) => ({
+//   ...item,
+//   sayHello,
+// }));
 
-// function foo (test) {
+// helloPersons[0]["sayHello"]();
 
-//     let age = 100;
-   
-//     function bar (age) { // let age = 100;
+// console.log(helloPersons);
 
-//         age = 222;
+// const timeoutId = setTimeout(() => {
+//     console.log('TWO!');
+// }, 1200);
 
-//         console.log(blabla);
-//         // {age, test, b}
-//     }
+// clearTimeout(timeoutId);
 
-//     bar(age);
+// const intervalId = setInterval(() => {
+//     console.log('ITS INTERVAL!');
+// }, 200);
 
+// clearInterval(intervalId);
 
-//     let blabla = 'blabla';
+// используя setInterval и setTimeout (and clears)
+// написать код который выводит в консоль в течении 5 секунд
+// числа 1 2 3 4 5
+// после чего останавливается (вывод чисел прекращается)
 
-// }
+let count = 0;
 
-// foo();
+const interval = setInterval(() => {
+  count++;
 
-// console.log(age);
+  if (count > 5) {
+    clearInterval(interval);
+  }
 
+  console.log(count);
+}, 1000);
 
-// HIGHER ORDER FUNCTION
-// callback
+// console.log('ONE!');
 
-// let a = 1;
+// setTimeout(() => {
+//     console.log('TWO');
+// }, 200);
 
-// function foo (cb) { // bar
-//     let a = 2;
-
-//     cb();
-// }
-
-// foo(bar);
-
-// function bar () {
-//     // {a: 1, foo}
-
-//     console.log(a);
-// }
-
-
-// Создать функцию checkLogin, которая принимает 4 параметра. 
-// 1 параметр - это логин, введенный пользователем,
-// 2 – правильный логин,
-// 3 – callback, который вызовется если логин верный,
-// 4 – callback, который вызовется если логин ложный.
-
-
-// let correctLogin = 'admin'
-
-// let userLogin = prompt('Введите логин:');
-
-// function cbTrue(){
-//     console.log('Добро пожаловать!')
-// }
-
-// function cbFalse(){
-//     console.log('Пароль неверный.')
-// }
-
-// function checkLogin(login, trueLogin, onCorrectLogin, onIncorrectLogin = () => console.log('DEFAULT')){
-//     if (login === trueLogin){
-//         onCorrectLogin();
-//     } else{
-//         onIncorrectLogin();
-//     }
-// }
-
-// checkLogin(userLogin, correctLogin, cbTrue, cbFalse);
-
-// checkLogin('user', 'asdasd', () => console.log('test'));
-
-
-// arr.reduce();
-
-// function foo (cb) {
-//     console.log('HELLO');
-
-//     cb();
-// }
-
-// foo(bar);
-// foo(valerchik);
-// foo(() => console.log('asdasd'));
-
-// function bar () {
-//     console.log('WORLD');
-// }
-
-// function valerchik () {
-//     console.log('VALERCHIK');
-// }
-
-
-// IIFE
-// immidately invoked function expression
-
-// (() => {
-//    let user = 'Valerchik';
-// })()
-
-
-// (function (a,b) {
-//     let user = 'Olejik';
-// })(2,3)
-
-// const foo = function () {};
-
-// let user = 'valerchik';
-
-
-// напишите функцию map
-
-const result = map([1,2,3], (item, index, arr  ) => {
-    if (index % 2 === 0) {
-        return item * 2;
-    } else {
-        return item;
-    }
-});
-
-
-function map (mass, cb) {
-    let resultArr = [];
-
-    for (let i = 0; i < mass.length; i++) {
-        const futureElement = cb(mass[i], i, mass);
-
-        resultArr.push(futureElement);
-    }
-
-    return resultArr;
-}
-
-console.log(result);
+// console.log('THREE!');
