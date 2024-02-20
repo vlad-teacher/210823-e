@@ -1,3 +1,4 @@
+
 // closure замыкание
 
 
@@ -160,3 +161,4 @@ function map (mass, cb) {
 }
 
 console.log(result);
+
