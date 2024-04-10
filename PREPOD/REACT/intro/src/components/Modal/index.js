@@ -4,8 +4,6 @@ import styles from './index.module.css';
 import {FaXbox} from 'react-icons/fa';
 
 
-
-
 export const Modal = ({children}) => {
     return createPortal(
         <div className={styles.modal}>

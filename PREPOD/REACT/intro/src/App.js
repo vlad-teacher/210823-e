@@ -70,6 +70,7 @@ export const App = () => {
   );
 
   return (
+    // TODO: open close modal
     <div>
       {isModalOpen && <Modal>
         Please fill in text
