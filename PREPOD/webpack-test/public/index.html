@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .active {
+            background-color: blueviolet;
+            padding: 20px;
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        div {
+            border: 5px solid red;
+        }
+
+        div > div {
+            border: 5px solid green;
+        }
+
+        div > div > div {
+            border: 5px solid purple;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="text" id="elemText" placeholder="input elem text here"/>
+
+    <button id="btn">
+        add list elem
+    </button>
+
+    <!-- <div class="test">smth</div> -->
+
+    <ul id="spisok" data-smth="blabla" data-smth-else="blablaAGAIN">
+        <li><span>one</span><span>one sibling</span></li>
+        <li data-price="2">two</li>
+        <li data-price="92">three</li>
+    </ul>
+
+
+    <!-- <input type="text" id="inp" />
+    
+    <ol class="test">
+        <li>odin</li>
+        <li>dwa</li>
+        <li>tri</li>
+    </ol>
+
+    <a href="https://google.com" id="link">go google</a>
+
+    <form action="obr.php" id="form">
+        <p>how old are you?</p>
+        <input type="text">
+
+        <button>ok</button>
+    </form>
+
+    <div id="one">
+        one
+
+        <div id="two">
+            two
+            
+            <div id="three">
+                three
+            </div>
+        </div>
+    </div> -->
+
+</body>
+</html>

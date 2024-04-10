@@ -1,0 +1,17 @@
+.common {
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border-radius: 12px;
+    font-size: 22px;
+    background-color: rgb(72, 120, 72);
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.common:hover {
+    background-color: darkgreen;
+}

@@ -1,0 +1,39 @@
+.todo {
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in-out;
+  border-radius: 12px;
+  padding: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.todo > *:first-child {
+  margin-right: auto;
+}
+
+.done {
+  background-color: #bfe5c7;
+}
+
+.icon {
+  font-size: 26px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  fill: #727272;
+  margin-right: 7px;
+}
+
+.icon:hover {
+  fill: #989898;
+}
+
+.iconDone {
+  fill: rgb(65, 169, 65);
+}
+
+.iconDone:hover {
+  fill: rgb(101, 203, 101);
+}

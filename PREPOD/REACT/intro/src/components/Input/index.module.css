@@ -1,0 +1,8 @@
+.common {
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    outline: none;
+}
