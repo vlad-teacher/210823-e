@@ -1,0 +1,26 @@
+.modal {
+    position: fixed;
+    border-radius: 12px;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid lightgray;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    transform: translate(-50%,-50%);
+    min-width: 200px;
+    min-height: 200px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+    z-index: 999;
+}
+
+.modalContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalHeader {
+    text-align: right;
+}

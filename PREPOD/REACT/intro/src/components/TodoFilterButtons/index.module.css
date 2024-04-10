@@ -1,0 +1,34 @@
+.filter {
+
+    display: flex;
+    margin: 20px;
+    align-items: stretch;
+}
+
+.filter > button {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    flex-grow: 1;
+    border: 1px solid lightgrey;
+    border-right:1px solid lightgray;
+    transition: all 0.4s ease-in-out;
+}
+
+.filter > button:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.filter > button:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.filter > button:first-child {
+    border-radius:  12px 0 0 12px;
+}
+
+.filter > button.active {
+    background-color: #000;
+    color: #fff;
+}
