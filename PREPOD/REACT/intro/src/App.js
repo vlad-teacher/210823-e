@@ -1,28 +1,35 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { v4 as setId } from "uuid";
 import { Modal } from "./components/Modal";
 import { TodoFilterButtons } from "./components/TodoFilterButtons";
 import { TodoList } from "./components/TodoList";
 import { TodoUserInput } from "./components/TodoUserInput";
+import { Button } from "./components/Button";
 
 export const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
   const [currentFilter, setCurrentFilter] = useState("all");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [selectedTodoId, setSelectedTodoId] = useState(null);
 
   const onInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const onClick = () => {
-    setTodos((prevTodosArr) => {
-      return [
-        ...prevTodosArr,
-        { text: inputValue, done: false, id: setId(), isEdit: false },
-      ];
-    });
-    setInputValue("");
+    if (inputValue) {
+      setTodos((prevTodosArr) => {
+        return [
+          ...prevTodosArr,
+          { text: inputValue, done: false, id: setId(), isEdit: false },
+        ];
+      });
+      setInputValue("");
+    } else {
+      setIsModalOpen(true);
+    }
   };
 
   const onToggleTodo = (clickedId) => {
@@ -38,7 +45,14 @@ export const App = () => {
   };
 
   const onDeleteTodo = (clickedTodoId) => {
-    setTodos((prevTodos) => prevTodos.filter(({ id }) => id !== clickedTodoId));
+    setDeleteModalOpen(true);
+    setSelectedTodoId(clickedTodoId);
+  };
+
+  const deleteTodo = () => {
+    setTodos((prevTodos) => prevTodos.filter(({ id }) => id !== selectedTodoId));
+    setDeleteModalOpen(false);
+    setSelectedTodoId(null);
   };
 
   const onToggleTodoEdit = (clickedId, newText) => {
@@ -61,6 +75,14 @@ export const App = () => {
     setCurrentFilter(name);
   };
 
+  const onModalClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const onDeleteModalClose = () => {
+    setDeleteModalOpen(false);
+  };
+
   // TODO: optimization
   const filteredTodos = todos.filter(
     (todo) =>
@@ -70,11 +92,15 @@ export const App = () => {
   );
 
   return (
-    // TODO: open close modal
     <div>
-      {isModalOpen && <Modal>
-        Please fill in text
-      </Modal>}
+      {isModalOpen && <Modal onClose={onModalClose}>Please fill in text</Modal>}
+      {isDeleteModalOpen && (
+        <Modal onClose={onDeleteModalClose}>
+          <div>Are you sure ?</div>
+          <Button onClick={deleteTodo}>Yes</Button>
+          <Button onClick={onDeleteModalClose}>No</Button>
+        </Modal>
+      )}
       <TodoUserInput
         onInputTextChange={onInputChange}
         inputValue={inputValue}

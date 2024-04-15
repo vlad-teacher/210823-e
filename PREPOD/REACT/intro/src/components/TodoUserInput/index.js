@@ -7,7 +7,7 @@ export const TodoUserInput = ({onInputTextChange, inputValue, buttonOkClick}) =>
   return (
     <div>
       <Input onChange={onInputTextChange} value={inputValue}/>
-      <Button onClick={buttonOkClick} />
+      <Button onClick={buttonOkClick}>OK</Button>
     </div>
   );
 };
