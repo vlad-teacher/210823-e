@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { v4 as setId } from "uuid";
 import { Modal } from "./components/Modal";
 import { TodoFilterButtons } from "./components/TodoFilterButtons";
@@ -83,13 +83,15 @@ export const App = () => {
     setDeleteModalOpen(false);
   };
 
-  // TODO: optimization
-  const filteredTodos = todos.filter(
-    (todo) =>
-      (currentFilter === "done" && todo.done) ||
-      (currentFilter === "undone" && !todo.done) ||
-      currentFilter === "all"
-  );
+  const filteredTodos = useMemo(() => {
+    return todos.filter(
+        (todo) =>
+          (currentFilter === "done" && todo.done) ||
+          (currentFilter === "undone" && !todo.done) ||
+          currentFilter === "all"
+      );
+  }, [todos, currentFilter]);
+
 
   return (
     <div>
